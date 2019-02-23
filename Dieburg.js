@@ -1,5 +1,5 @@
 var index = 0;
-var x = document.getElementsByTagName("img"); // alle Bilder in Array
+var x = document.getElementsByClassName("slideshow"); // alle Bilder in Array
 
 for(let i=0; i<x.length; i++){  // alle Bilder ausblenden
     x[i].style.display = "none";
