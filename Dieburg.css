@@ -1,0 +1,105 @@
+h1{
+    text-align: center;
+}
+
+img{
+    display: block;
+    max-width: 100%;  /*Bild nimmt maximal 100% der Breite des Elternelements ein*/
+    height: 40vh;    /*maximal 50% des Viewports in der Höhe*/
+    margin: 0 auto;
+}
+
+
+
+nav{
+    background-color: #a9acb2;
+    padding: 0.5em;
+    margin: 1em 0 1em 0;
+}
+
+li{
+    list-style-type: none;
+    display: inline;
+    margin: 1em;
+    color: white;   
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+#div1{
+    border-radius: 10px;
+    background-color: #f45c42;
+    padding: 10px;
+    margin: 0.5em;
+    height: 10em;
+}
+
+#div2{
+    border-radius: 10px;
+    background-color: #45e870;
+    padding: 10px;
+    margin: 0.5em;
+    height: 10em;
+}
+
+#div3{
+    border-radius: 10px;
+    background-color: #e8e545;
+    padding: 10px;
+    margin: 0.5em;
+    height: 10em;
+    vertical-align: 
+}
+
+h1{
+    text-decoration: underline;
+}
+
+h1, h2, h3{
+    text-transform: uppercase;
+}
+
+li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.right{
+    float: right;
+}
+
+.left{
+    float:left:
+}
+
+.black{
+    background-color: white;
+}
+
+.white{
+    background-color: #45e870;
+}
+
+table{
+    border-style: dotted;
+    border-color: black;
+}
+
+footer{
+    background-color: #a9acb2;
+    width: 100%;
+    float:right;
+    margin: 1em 0 0 0;
+    padding: 1em;
+}
+
+footer a{
+    float: right;
+    margin: 1em; 
+    color: white;
+}
