@@ -5,7 +5,7 @@ h1{
 img{
     display: block;
     max-width: 100%;  /*Bild nimmt maximal 100% der Breite des Elternelements ein*/
-    height: 40vh;    /*maximal 50% des Viewports in der Höhe*/
+    height: 40vh;    /*maximal 40% des Viewports in der Höhe*/
     margin: 0 auto;
 }
 
