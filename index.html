@@ -2,12 +2,13 @@
 <html>
 <head>
     <meta charset=utf-8>
-    <link href="Dieburg.css" rel="stylesheet" type="text/css">
-    <title>Dieburger Stadtführer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!---Breite der Website passt sich an Viewport an-->
+    <link href="indexResponsive.css" rel="stylesheet" type="text/css">
+    
 </head>
     
 <body>
-    <h1>Dieburger Stadtführer    </h1>
+    <h1 class="header">Dieburger Stadtführer    </h1>
     
      <img class="slideshow" src="https://www.hessenfilm.de/fileadmin/locations/Schlossgartenweiher__Stadt_Dieburg.jpg" alt="Springbrunnen im Schlossgarten">
     <img class="slideshow" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Fastnachtsbrunnen_Dieburg_2.jpg" alt="Fastnachtsbrunnen">
@@ -18,43 +19,61 @@
     <img class="slideshow" src="http://gotravelaz.com/wp-content/uploads/images/Dieburg_8259.jpg" alt="Marktplatz">
     
     
-    <nav>
+    <nav class="header">
         <ul>
-            <li>Über den Stadtführer</li>
-            <!--<li>Parks</li>-->
-            <li>Parkanlagen</li>
-            <li>Historische Altstadt</li>
-            <li>Museen</li>
+            
+            <li><a href="">Über den Stadtführer</a></li>
+            
+            <li><a href="Parkanlagen.html">Parkanlagen</a></li>
+            
+            <li><a href="">Historische Altstadt</a></li>
+            
+            <li><a href="">Museen</a></li>
+            
+            <li><a href="Freibad.html">Freibad</a></li>
+            
             <li><a href="Veranstaltungen.html">Veranstaltungen</a></li>
-            <li>Restaurants</li>
-            <li>Cafés</li>
-            <li>Stadtverwaltung</li>
-            <!--<li>Wohnungsmarkt</li>-->
+            
+            <li><a href="">Restaurants</a></li>
+            
+            <li><a href="">Cafés</a></li>
+            
+            <li><a href="">Stadtverwaltung</a></li>
+            
+            <!--Wohnungsmarkt-->
+            
         </ul>
     </nav>
     
    
+    <div class="gridContainer">
     
-    
-    <div id="div1">
-    <h2>Über Dieburg</h2>
-    <p>Dieburg (im lokalen Dialekt: Dibborsch)[2] ist eine Stadt und ein Mittelzentrum in Südhessen, etwa 15 km östlich von Darmstadt. Dieburg war vor 1977 Kreisstadt des Altkreises Dieburg und liegt im östlichen Teil des Landkreises Darmstadt-Dieburg. Die Stadt ist einer der Standorte der Hochschule Darmstadt.</p>
-    <p>Quelle: Wikipedia</p>
+        <div id="div1">
+        <h2>Über Dieburg</h2>
+        <p>Dieburg (im lokalen Dialekt: Dibborsch)[2] ist eine Stadt und ein Mittelzentrum in Südhessen, etwa 15 km östlich von Darmstadt. Dieburg war vor 1977 Kreisstadt des Altkreises Dieburg und liegt im östlichen Teil des Landkreises Darmstadt-Dieburg. Die Stadt ist einer der Standorte der Hochschule Darmstadt.</p>
+        <p>Quelle: Wikipedia</p>
+            </div>
+
+        <div id="div2">
+        <h3>Daten</h3>
+        <table> 
+            <tr class="black"><td class="left">Einwohner</td><td class="right">15000</td></tr>
+            <tr class="white"><td class="left">Höhe</td><td class="right">143m über Meeresspiegel</td></tr>
+            <tr class="black"><td class="left">Postleitzahl</td><td class="right">64807</td></tr>
+            <tr class="white"><td class="left">Vorwahl</td><td class="right">06071</td></tr>
+        </table>
         </div>
-    
-    <div id="div2">
-    <h3>Daten</h3>
-    <table> 
-        <tr class="black"><td class="left">Einwohner</td><td class="right">15000</td></tr>
-        <tr class="white"><td class="left">Höhe</td><td class="right">143m über Meeresspiegel</td></tr>
-        <tr class="black"><td class="left">Postleitzahl</td><td class="right">64807</td></tr>
-        <tr class="white"><td class="left">Vorwahl</td><td class="right">06071</td></tr>
-    </table>
-    </div>
-    
-    <div id="div3">
-    <h3>Motto</h3>
-    <p>Dibborsch Äla!</p>
+        
+        <div id="div3">
+            <h3>Lage</h3>
+            <p><a href="Impressum.html">Hier</a> finden Sie uns.</p>
+        </div>
+
+        <div id="div4">
+        <h3>Motto</h3>
+        <p>Dibborsch Äla!</p>
+        </div>
+        
     </div>
     
     
@@ -64,8 +83,9 @@
     </footer>
     
     
-    </body>
+</body>
     
-    <script src="Dieburg.js" type="text/javascript"></script>
+
+<script src="Dieburg.js" type="text/javascript"></script>
     
 </html>

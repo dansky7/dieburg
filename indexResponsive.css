@@ -1,0 +1,92 @@
+body{
+    margin: 0 auto;  /*Abstand oben & unten = 0
+                    Abstand links & rechts = auto = zentriert*/
+    max-width: 60em;  /*maximale Viewport-Breite = 60 mal die Breite des M der Schriftart im body-Element*/
+}
+
+.gridContainer{
+    
+    display:flex;  /*alle direkten Kindelemente werden zu Flex-items*/
+    
+    flex-direction: column;  
+}
+
+#div1, #div2, #div3, #div4{
+    margin: 0.2em;
+    padding: 0.5em;
+    border-radius: 10px;
+    
+    border-style: solid;
+    border-color: black;   
+}
+#div1{
+    background-color: #f45c42;
+}
+#div2{
+    background-color: #45e870;
+}
+#div3{
+    background-color: white;
+    color: black;
+}
+#div4{
+    background-color: #e8e545;
+}
+
+img{
+    max-width: 100%; /*dynamische Breite, maximal 100%                  des Viewports*/
+    height: 35vh;  /*Höhe von 35% der Höhe des                          Viewports*/
+    
+    margin: 0 auto;  /*Abstand oben, unten = 0
+                        Abstand link, rechts = gleichmäßig verteilt = zentriert*/
+    
+    display:block;   /*Bild duldet keine anderen                        Elemente neben sich */
+}
+
+h1{
+    text-align: center;
+}
+
+nav{
+    background-color: #a9acb2;
+    color: white;
+    
+    display: flex;
+    flex-flow: ;
+    
+    margin: 0.3em 0;
+}
+
+footer{
+    background-color: #a9acb2;
+    color: white; 
+    margin: 0.3em 0;
+    padding: 0.5em;
+    
+    display: flex;
+    flex-flow: row-reverse nowrap;
+}
+footer a{
+    margin: 0 0.5em;
+}
+
+
+li{
+    display: inline;
+    margin: 0 0.5em;
+    
+}
+
+li a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+
+

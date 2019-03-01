@@ -1,3 +1,5 @@
+
+
 h1{
     text-align: center;
 }
@@ -5,11 +7,31 @@ h1{
 img{
     display: block;
     max-width: 100%;  /*Bild nimmt maximal 100% der Breite des Elternelements ein*/
-    height: 40vh;    /*maximal 50% des Viewports in der Höhe*/
+    height: 40vh;    /*maximal 40% des Viewports in der Höhe*/
     margin: 0 auto;
 }
 
 
+
+
+
+
+.gridContainer{
+    display: flex;     /*Container als Flexbox*/
+    flex-direction: column; /*Hauptachse = Vertikale*/
+    flex-wrap: wrap;    /*Umbruch von Flex-items*/
+    align-items: stretch;     /*Ausrichtung Querachse*/
+    align-content: ;   /*Ausrichtung Querachse*/
+    justify-content: ; /*Ausrichtung Hauptachse */
+    
+} 
+
+
+
+
+#div1{
+    
+}
 
 nav{
     background-color: #a9acb2;
