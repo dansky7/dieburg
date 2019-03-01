@@ -12,26 +12,6 @@ h1{
     margin: 0.5em 0;
 }
 
-/*header*/
-.Startseite{
-    position: fixed;
-    max-width: 25vw;
-    
-    text-decoration: underline;
-    color: white;
-    
-    background-color: #a9acb2;
-    padding: 0.5em;
-}
-@media (max-width: 650px){
-    .Startseite{
-        position: static;
-    }
-}
-.Startseite:hover{
-    color: black;
-}
-
 /*Bilder*/
 img{
     max-width: 100%; /*dynamische Breite, maximal 100%                  des Viewports*/
