@@ -1,16 +1,55 @@
+
+/*Viewport*/
 body{
     margin: 0 auto;  /*Abstand oben & unten = 0
                     Abstand links & rechts = auto = zentriert*/
     max-width: 60em;  /*maximale Viewport-Breite = 60 mal die Breite des M der Schriftart im body-Element*/
 }
 
+/*Überschriften*/
+h1{
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+/*header*/
+.Startseite{
+    position: fixed;
+    max-width: 25vw;
+    
+    text-decoration: underline;
+    color: white;
+    
+    background-color: #a9acb2;
+    padding: 0.5em;
+}
+@media (max-width: 650px){
+    .Startseite{
+        position: static;
+    }
+}
+.Startseite:hover{
+    color: black;
+}
+
+/*Bilder*/
+img{
+    max-width: 100%; /*dynamische Breite, maximal 100%                  des Viewports*/
+    height: 35vh;  /*Höhe von 35% der Höhe des                          Viewports*/
+    
+    margin: 0 auto;  /*Abstand oben, unten = 0
+                        Abstand link, rechts = gleichmäßig verteilt = zentriert*/
+    
+    display:block;   /*Bild duldet keine anderen                        Elemente neben sich */
+}
+
+/*main*/
 .gridContainer{
     
     display:flex;  /*alle direkten Kindelemente werden zu Flex-items*/
     
     flex-direction: column;  
 }
-
 #div1, #div2, #div3, #div4{
     margin: 0.2em;
     padding: 0.5em;
@@ -33,20 +72,7 @@ body{
     background-color: #e8e545;
 }
 
-img{
-    max-width: 100%; /*dynamische Breite, maximal 100%                  des Viewports*/
-    height: 35vh;  /*Höhe von 35% der Höhe des                          Viewports*/
-    
-    margin: 0 auto;  /*Abstand oben, unten = 0
-                        Abstand link, rechts = gleichmäßig verteilt = zentriert*/
-    
-    display:block;   /*Bild duldet keine anderen                        Elemente neben sich */
-}
-
-h1{
-    text-align: center;
-}
-
+/*Navigationsleiste*/
 nav{
     background-color: #a9acb2;
     color: white;
@@ -56,7 +82,22 @@ nav{
     
     margin: 0.3em 0;
 }
+li{
+    display: inline;
+    margin: 0 0.5em;
+    
+}
+li a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+}
+li a:hover{
+    text-decoration: underline;
+    color: black;
+}
 
+/*footer*/
 footer{
     background-color: #a9acb2;
     color: white; 
@@ -69,24 +110,13 @@ footer{
 footer a{
     margin: 0 0.5em;
 }
-
-
-li{
-    display: inline;
-    margin: 0 0.5em;
-    
-}
-
-li a{
-    text-transform: capitalize;
-    text-decoration: none;
-    color: white;
-}
-
-li a:hover{
+footer a:hover{
     text-decoration: underline;
     color: black;
+    cursor: pointer;
 }
+
+
 
 
 

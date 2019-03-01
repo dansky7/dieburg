@@ -1,23 +1,124 @@
+/*Viewport*/
+body{
+    margin: 0 auto;  /*Abstand oben & unten = 0
+                    Abstand links & rechts = auto = zentriert*/
+    max-width: 60em;  /*maximale Viewport-Breite = 60 mal die Breite des M der Schriftart im body-Element*/
+}
+
+
+
+/*Bilder*/
 img{
     display:block;
     max-width: 100%;
-    height: 40vh;
+    height: 35vh;
     
 }
 
+
+/*Überschriften*/
 h1{
     text-align: center;
-    margin: 1em;
+    margin-top: 0.5em;
+}
+h2{
+    text-align: center;
+    
     background-color: red;
-    border-radius: 10px;
+    border-radius: 1em;
+    
+    margin: 3em 0.5em 0.5em 0.5em;
     padding: 0.5em;
 }
-
 h3{
     text-transform: uppercase;
     text-decoration: underline;
 }
 
-div{
-    margin: 1em;
+/*header*/
+.Startseite{
+    position: fixed;
+    max-width: 25vw;
+    
+    text-decoration: underline;
+    color: white;
+    
+    background-color: #a9acb2;
+    padding: 0.5em;
 }
+@media (max-width: 650px){
+    .Startseite{
+        position: fixed;
+        bottom: 0;
+    }
+}
+.Startseite:hover{
+    color: black;
+}
+
+
+/*Navigationsleiste*/
+nav{
+    background-color: #a9acb2;
+    color: white;
+    
+    display: flex;
+    flex-flow: ;
+    
+    margin: 0.3em 0;
+}
+li{
+    display: inline;
+    margin: 0 0.5em;
+    
+}
+li a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+}
+li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+
+/*main*/
+.gridContainer{
+    display:flex;
+    flex-direction: column;
+}
+#div1, #div2, #div3{
+    border-style: solid;
+    border-color: black;
+    
+    border-radius: 1em;
+    
+    margin: 0.5em;
+    padding: 0.5em 1em;
+}
+
+article{
+    background-color: beige;
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+
+footer{
+    background-color: #a9acb2;
+    color: white; 
+    margin: 0.3em 0;
+    padding: 0.5em;
+    
+    display: flex;
+    flex-flow: row-reverse nowrap;
+}
+footer a{
+    margin: 0 0.5em;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: black;
+    cursor: pointer;
+}
+
