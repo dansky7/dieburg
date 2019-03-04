@@ -37,15 +37,19 @@ function addVeranstaltungen(){
         let clon = template.content.cloneNode(true);
         console.log(clon);
         document.getElementById("content").appendChild(clon);
-        this.style.textDecoration = "underline black";
-        this.style.color = "black";
+        z1.style.textDecoration = "underline black";
+        z2.style.textDecoration = "underline black";
+        z1.style.color = "black";
+        z2.style.color = "black";
         veranstaltungenClicked = true;
     }else{
         removeVeranstaltungenStylesheet();
         if(this == z2) openNav();
         document.getElementById("content").innerHTML = "";
-        this.style.textDecoration = "none";
-        this.style.color = "white";
+        z1.style.textDecoration = "none";
+        z2.style.textDecoration = "none";
+        z1.style.color = "white";
+        z2.style.color = "white";
         veranstaltungenClicked = false;
     }
 }
