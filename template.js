@@ -37,11 +37,15 @@ function addVeranstaltungen(){
         let clon = template.content.cloneNode(true);
         console.log(clon);
         document.getElementById("content").appendChild(clon);
+        this.style.textDecoration = "underline black";
+        this.style.color = "black";
         veranstaltungenClicked = true;
     }else{
         removeVeranstaltungenStylesheet();
         if(this == z2) openNav();
         document.getElementById("content").innerHTML = "";
+        this.style.textDecoration = "none";
+        this.style.color = "white";
         veranstaltungenClicked = false;
     }
 }
