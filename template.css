@@ -5,6 +5,13 @@ body{
     max-width: 60em;  /*maximale Viewport-Breite = 60 mal die Breite des M der Schriftart im body-Element*/
 }
 
+/*Logo*/
+
+img:first-of-type{
+    margin: 0 auto;
+}
+
+
 /*Überschrift*/
 h1{
     text-align: center;
