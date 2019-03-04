@@ -13,7 +13,7 @@
 <img src="logo2.png" id="Logo"></img>
     
 <nav id="Navigation">
-            <a href="inArbeit.html">Über den Stadtführer</a>
+            <a class="StartseiteAnchor">Startseite</a>
             <a href="Parkanlagen.html">Parkanlagen</a>
             <a href="inArbeit.html">Historische Altstadt</a>
             <a href="inArbeit.html">Museen</a>
@@ -27,7 +27,7 @@
 <nav id="NavigationMobileBrowse">
         <button id="NavigationButton" class="material-icons" type="button" onclick="openNav()">&#xe5c3;</button>
         <div id="MobileUl">
-            <a href="inArbeit.html">Über den Stadtführer</a>
+            <a class="StartseiteAnchor">Startseite</a>
             <a href="Parkanlagen.html">Parkanlagen</a>
             <a href="inArbeit.html">Historische Altstadt</a>
             <a href="inArbeit.html">Museen</a>
@@ -39,11 +39,110 @@
         </div>
 </nav>    
     
+    
+    
+<div id="content">
+    <div id="ÜberschriftContent">
+        <style>#ÜberschriftContent h2{text-align: center; /*font-family: Lucida Console*/; text-shadow: 2px 2px 1px grey; background-color: #a9acb2;border-radius: 1em 1em 0 0;padding: 0.5em;} </style>
+        <h2>Willkommen in Dieburg!</h2>
+    </div>
+    <style>
+        #gridContainer{
+            display:flex;  /*alle direkten Kindelemente werden zu Flex-items*/
+            flex-direction: column;  
+        }
+        #div1, #div2, #div3, #div4{
+            margin: 0.2em;
+            padding: 0.5em;
+            border-radius: 10px;
 
-<div id="ÜberschriftContent"><h3></h3></div>
+            border-style: solid;
+            border-color: black;   
+        }
+        #div1{
+            background-color: #f45c42;
+        }
+        #div2{
+            background-color: white;
+        }
+        #div3{
+            background-color: #45e870;
+            color: black;
+        }
+        #div4{
+            background-color: #e8e545;
+        }
+        /*Bilder*/
+        img{
+            max-width: 100%; /*dynamische Breite, maximal 100%                  des Viewports*/
+            height: 35vh;  /*Höhe von 35% der Höhe des                          Viewports*/
+
+            margin: 0 auto;  /*Abstand oben, unten = 0
+                                Abstand link, rechts = gleichmäßig verteilt = zentriert*/
+
+            display:block;   /*Bild duldet keine anderen                        Elemente neben sich */
+        }
+    </style>
+    <div id="DieburgSlideshow">
+        <img class="slideshow" src="https://www.hessenfilm.de/fileadmin/locations/Schlossgartenweiher__Stadt_Dieburg.jpg" alt="Springbrunnen im Schlossgarten">
+        <img class="slideshow" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Fastnachtsbrunnen_Dieburg_2.jpg" alt="Fastnachtsbrunnen">
+        <img class="slideshow" src="https://www.alleburgen.de/pics/he/hes373.jpg" alt"Hexenturm">
+        <img class="slideshow" src="http://www.weihnachtsmarkt-deutschland.de/bilder/dieburg-weihnachtsmarkt.jpg" alt="Weihnachtsmarkt">
+        <img class="slideshow" src="https://www.arbeiten-bei-stihl.de/assets/images/jpg/ueber_stihl/standorte/dieburg/HEADER_Dieburg_1280x1000px.jpg" alt="Fechenbach Schloss">
+        <img class="slideshow" src="https://www.da-imnetz.de/bilder/2012/07/21/2425690/1213387367-freibad-dieburg-1d5OuALtrkef.jpg" alt="Schwimmbad">
+        <img class="slideshow" src="http://gotravelaz.com/wp-content/uploads/images/Dieburg_8259.jpg" alt="Marktplatz">
+    </div>
+    <div id="gridContainer">
     
-    
-<div id="content"></div>
+        <div id="div1">
+        <h3>Über Dieburg</h3>
+        <p>Dieburg (im lokalen Dialekt: Dibborsch)[2] ist eine Stadt und ein Mittelzentrum in Südhessen, etwa 15 km östlich von Darmstadt. Dieburg war vor 1977 Kreisstadt des Altkreises Dieburg und liegt im östlichen Teil des Landkreises Darmstadt-Dieburg. Die Stadt ist einer der Standorte der Hochschule Darmstadt.</p>
+        <p>Quelle: Wikipedia</p>
+            </div>
+
+        <div id="div2">
+        <h3>Daten</h3>
+        <table> 
+            <tr class="black"><td class="left">Einwohner</td><td class="right">15000</td></tr>
+            <tr class="white"><td class="left">Höhe</td><td class="right">143m über Meeresspiegel</td></tr>
+            <tr class="black"><td class="left">Postleitzahl</td><td class="right">64807</td></tr>
+            <tr class="white"><td class="left">Vorwahl</td><td class="right">06071</td></tr>
+        </table>
+        </div>
+        
+        <div id="div3">
+            <style>#div3 a{display: inline;}</style>
+            <h3>Lage</h3>
+            <p><a href="Impressum.html">Hier</a> finden Sie uns.</p>
+        </div>
+
+        <div id="div4">
+        <h3>Motto</h3>
+        <p>Dibborsch Äla!</p>
+        </div>
+        
+    </div>
+    <script>
+        var index = 0;
+        var x = document.getElementsByClassName("slideshow"); // alle Bilder in Array
+        for(let i=0; i<x.length; i++){  // alle Bilder ausblenden
+            x[i].style.display = "none";
+        }
+        x[0].style.display="block"; // erstes Bild einblenden
+        carousel();
+        function carousel(){
+            x[index].style.display="none";
+            index++;
+            if(index<x.length){
+                x[index].style.display = "block";
+            }else{
+                index=0;
+                x[index].style.display = "block"
+            }
+            setTimeout(carousel, 3000);
+        }
+    </script>
+</div>
     
     
     
@@ -54,6 +153,109 @@
 
 
 </body>
+
+<template id="Startseite">
+    <div id="ÜberschriftContent">
+        <style>#ÜberschriftContent h2{text-align: center; /*font-family: Lucida Console*/; text-shadow: 2px 2px 1px grey; background-color: #a9acb2;border-radius: 1em 1em 0 0;padding: 0.5em;} </style>
+        <h2>Willkommen in Dieburg!</h2>
+    </div>
+    <style>
+        #gridContainer{
+            display:flex;  /*alle direkten Kindelemente werden zu Flex-items*/
+            flex-direction: column;  
+        }
+        #div1, #div2, #div3, #div4{
+            margin: 0.2em;
+            padding: 0.5em;
+            border-radius: 10px;
+
+            border-style: solid;
+            border-color: black;   
+        }
+        #div1{
+            background-color: #f45c42;
+        }
+        #div2{
+            background-color: white;
+        }
+        #div3{
+            background-color: #45e870;
+            color: black;
+        }
+        #div4{
+            background-color: #e8e545;
+        }
+        /*Bilder*/
+        img{
+            max-width: 100%; /*dynamische Breite, maximal 100%                  des Viewports*/
+            height: 35vh;  /*Höhe von 35% der Höhe des                          Viewports*/
+
+            margin: 0 auto;  /*Abstand oben, unten = 0
+                                Abstand link, rechts = gleichmäßig verteilt = zentriert*/
+
+            display:block;   /*Bild duldet keine anderen                        Elemente neben sich */
+        }
+    </style>
+    <div id="DieburgSlideshow">
+        <img class="slideshow" src="https://www.hessenfilm.de/fileadmin/locations/Schlossgartenweiher__Stadt_Dieburg.jpg" alt="Springbrunnen im Schlossgarten">
+        <img class="slideshow" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Fastnachtsbrunnen_Dieburg_2.jpg" alt="Fastnachtsbrunnen">
+        <img class="slideshow" src="https://www.alleburgen.de/pics/he/hes373.jpg" alt"Hexenturm">
+        <img class="slideshow" src="http://www.weihnachtsmarkt-deutschland.de/bilder/dieburg-weihnachtsmarkt.jpg" alt="Weihnachtsmarkt">
+        <img class="slideshow" src="https://www.arbeiten-bei-stihl.de/assets/images/jpg/ueber_stihl/standorte/dieburg/HEADER_Dieburg_1280x1000px.jpg" alt="Fechenbach Schloss">
+        <img class="slideshow" src="https://www.da-imnetz.de/bilder/2012/07/21/2425690/1213387367-freibad-dieburg-1d5OuALtrkef.jpg" alt="Schwimmbad">
+        <img class="slideshow" src="http://gotravelaz.com/wp-content/uploads/images/Dieburg_8259.jpg" alt="Marktplatz">
+    </div>
+    <div id="gridContainer">
+    
+        <div id="div1">
+        <h2>Über Dieburg</h2>
+        <p>Dieburg (im lokalen Dialekt: Dibborsch)[2] ist eine Stadt und ein Mittelzentrum in Südhessen, etwa 15 km östlich von Darmstadt. Dieburg war vor 1977 Kreisstadt des Altkreises Dieburg und liegt im östlichen Teil des Landkreises Darmstadt-Dieburg. Die Stadt ist einer der Standorte der Hochschule Darmstadt.</p>
+        <p>Quelle: Wikipedia</p>
+            </div>
+
+        <div id="div2">
+        <h3>Daten</h3>
+        <table> 
+            <tr class="black"><td class="left">Einwohner</td><td class="right">15000</td></tr>
+            <tr class="white"><td class="left">Höhe</td><td class="right">143m über Meeresspiegel</td></tr>
+            <tr class="black"><td class="left">Postleitzahl</td><td class="right">64807</td></tr>
+            <tr class="white"><td class="left">Vorwahl</td><td class="right">06071</td></tr>
+        </table>
+        </div>
+        
+        <div id="div3">
+            <style>#div3 a{display: inline;}</style>
+            <h3>Lage</h3>
+            <p><a href="Impressum.html">Hier</a> finden Sie uns.</p>
+        </div>
+
+        <div id="div4">
+        <h3>Motto</h3>
+        <p>Dibborsch Äla!</p>
+        </div>
+        
+    </div>
+    <script>
+        var index = 0;
+        var x = document.getElementsByClassName("slideshow"); // alle Bilder in Array
+        for(let i=0; i<x.length; i++){  // alle Bilder ausblenden
+            x[i].style.display = "none";
+        }
+        x[0].style.display="block"; // erstes Bild einblenden
+        carousel();
+        function carousel(){
+            x[index].style.display="none";
+            index++;
+            if(index<x.length){
+                x[index].style.display = "block";
+            }else{
+                index=0;
+                x[index].style.display = "block"
+            }
+            setTimeout(carousel, 3000);
+        }
+    </script>
+</template>
 
 <template id="Veranstaltungen">
     <h2>Veranstaltungen in Dieburg</h2>
