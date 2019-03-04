@@ -15,3 +15,46 @@ function openNav(){
         boolean = false;
     }
 }
+
+
+
+
+var veranstaltungenClicked = false;
+var z1 = document.getElementById("VeranstaltungenAnchor1");
+var z2 = document.getElementById("VeranstaltungenAnchor2");
+console.log(z1);
+console.log(z2);
+z1.addEventListener("click", addVeranstaltungen);
+z2.addEventListener("click", addVeranstaltungen);
+
+function addVeranstaltungen(){
+    
+    if(!veranstaltungenClicked){
+        addVeranstaltungenStylesheet();
+        if(this == z2) openNav();
+        let template = document.getElementById("Veranstaltungen");
+        console.log(template);
+        let clon = template.content.cloneNode(true);
+        console.log(clon);
+        document.getElementById("content").appendChild(clon);
+        veranstaltungenClicked = true;
+    }else{
+        removeVeranstaltungenStylesheet();
+        if(this == z2) openNav();
+        document.getElementById("content").innerHTML = "";
+        veranstaltungenClicked = false;
+    }
+}
+
+
+function addVeranstaltungenStylesheet(){
+    var link = document.createElement("link");
+    link.href= "contentVeranstaltungen.css";
+    link.type= "text/css";
+    link.rel = "stylesheet";
+    
+    document.getElementsByTagName("head")[0].appendChild(link);
+}
+function removeVeranstaltungenStylesheet(){
+    document.getElementsByTagName("head")[0].removeChild(document.getElementsByTagName("head")[0].lastChild);
+}
