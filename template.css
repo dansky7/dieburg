@@ -9,7 +9,6 @@ body{
 #Logo{
     display: block;
     margin: 0.5em auto;
-    max-width: 100%;
     max-width: 50vw;
     max-height: 15vh;
 }
@@ -54,7 +53,9 @@ a:hover{
     }
     
     #Logo{
-        max-width:100vw;
+        max-width: 100vw;
+        min-width: 75vw;
+        max-height: 25vh;
     }
 }
 
